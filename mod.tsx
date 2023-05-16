@@ -2,7 +2,7 @@
 /** @jsx h */
 import { h } from "https://esm.sh/preact@10.13.2";
 import { Links, OptionLinks, cleanLinks } from "./links.tsx"
-import {parseMarkdown} from "https://deno.land/x/markdown_wasm/mod.ts"
+import { marky } from "https://deno.land/x/marky@v1.1.6/mod.ts";
 import { HTML, HTMLProps } from "./html.tsx";
 import { preactResponse } from "./utilities.ts";
 import { Image, ImageOptions, spreadImageProps } from "./image.tsx";
@@ -19,9 +19,9 @@ export const AnchorArborPageComponent = (props: ArborOptions & HTMLProps) => {
   return (
     <HTML {...props}>
       {props.topImage && <Image className="topImage" width='100' height="100" {...spreadImageProps(props.topImage)} />}
-      {props.summary && <div className="summary markdown" dangerouslySetInnerHTML={{__html: parseMarkdown(props.summary)}}/>}
+      {props.summary && <div className="summary markdown" dangerouslySetInnerHTML={{__html: marky(props.summary)}}/>}
       <Links links={links}></Links>
-      {props.footer && <div className="footer markdown" dangerouslySetInnerHTML={{__html: parseMarkdown(props.footer)}}/>}
+      {props.footer && <div className="footer markdown" dangerouslySetInnerHTML={{__html: marky(props.footer)}}/>}
     </HTML>
   )
 }
