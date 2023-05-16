@@ -1,4 +1,6 @@
-# ⚓️🌲 AnchorArbor
+# AnchorArbor
+
+> ⚓️🌲 Create a static link-list page using tailwind
 
 This project is inspired by Deno's series of articles "[A Whole Website in a Single JavaScript File](https://deno.com/blog/a-whole-website-in-a-single-js-file-continued)" and the Deno "[blog](https://deno.land/x/blog@0.6.0)" module. These projects build HTML site and serve it in real-time with no build step. ArborAnchor is a single page route that offers a function with the signature `(req: Request) => Response`. The page renders a list of links, along with optional profile image, meta tags, a summary, and footer. 
 
