@@ -8,7 +8,7 @@ Source code running on Deno Deploy 👉 https://dash.deno.com/playground/anchor-
 
 Live code running 💗 https://anchor-arbor.deno.dev/
 
-You can run the exmaple with:
+You can run the example with:
 
 ```bash
 deno run --allow-net ./examples/alpha.ts
